@@ -3,8 +3,8 @@
     --color-body: #074f8a;
     --background-body: #a7a7a7;
     --color-contour: #26569e;
-    --color-passagesouris: #1e94b8;
-    --texte-clair: #b3dddf;
+    --color-passagesouris: #90cbdd;
+    --texte-clair: #c6d5e3;
     --background-services: #cfcfcf;
 }
 
@@ -147,7 +147,7 @@ section {
 /*  En-tête */
 
 .header {
-    background: #89a6c5;
+    background: var(--background-services);
     border-bottom: 2px solid #292d35;
     position: sticky;
     top: 0;
@@ -160,6 +160,11 @@ section {
     letter-spacing: 2px;
     transform: translateY(-3px);
 }
+
+.header .logo-social path {
+    fill: var(--color-body);
+}
+
 
 .navbar {
     display: none;
@@ -278,6 +283,11 @@ section {
 .hero__item.left {
     animation-duration: 2s;
     animation-name: slideInleft;
+}
+
+.metier {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 .hero__item.right {
