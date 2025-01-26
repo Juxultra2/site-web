@@ -78,7 +78,7 @@ li {
 }
 
 .category {
-    margin: 0;
+    margin: 0 0 0.75rem 0;
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--color-contour);
@@ -630,5 +630,3 @@ footer .socials a:hover {
         transform: translateX(0);
     }
 }
-
-/* https://youtu.be/vdpM-c-Wt1o . https://youtu.be/vdpM-c-Wt1o?t=3007 */
