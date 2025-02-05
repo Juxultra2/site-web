@@ -342,33 +342,33 @@
         </div>
         <ul class="grid portfolio-filters list-unstyled">
             <li class="grid__item">
-                <a href="#" class="active">Tous les projets</a> <!-- À faire en js -->
+                <a href="#" class="active" data-filter="all">Tous les projets</a> <!-- À faire en js -->
             </li>
             <li class="grid__item">
-                <a href="#">Développement web</a>
+                <a href="#" data-filter="web">Développement web</a>
             </li>
             <li class="grid__item">
-                <a href="#">Optimisation</a>
+                <a href="#" data-filter="opti">Optimisation</a>
             </li>
             <li class="grid__item">
-                <a href="#">Applications</a>
+                <a href="#" data-filter="app">Applications</a>
             </li>
         </ul>
         <div class="grid">
             <div class="grid__item">
-                <div class="card">
+                <div class="card" data-category="web">
                     <img src="./img/projet/Booki_img.PNG" alt="" class="card__image">
                     <div class="card__iner">
                         <h3 class="card__title">Booki - agence de voyage</h3>
                         <p class="category">Création d'une interface responsive en HTML et CSS, adaptée à tous les appareils.</p>
                     </div>
                     <div class="card__overlay">
-                        <a href="https://juxultra2.github.io/P2_Booki/">+</a>
+                        <a data-id="modal-1" href="https://juxultra2.github.io/P2_Booki/" target="_blank">+</a>
                     </div>
                 </div>
             </div>
             <div class="grid__item">
-                <div class="card">
+                <div class="card" data-category="web">
                     <img src="./img/projet/Sophie_Bluel-Architecte_d_interieur_img.PNG" alt="" class="card__image">
                     <div class="card__iner">
                         <h3 class="card__title">Sophie Bluel - Architecte d’intérieur</h3>
@@ -380,7 +380,7 @@
                 </div>
             </div>
             <div class="grid__item">
-                <div class="card">
+                <div class="card" data-category="opti">
                     <img src="./img/projet/Nina-Carducci_img.PNG" alt="" class="card__image">
                     <div class="card__iner">
                         <h3 class="card__title">Nina Carducci - Photographe</h3>
@@ -392,7 +392,7 @@
                 </div>
             </div>
             <div class="grid__item">
-                <div class="card">
+                <div class="card" data-category="app">
                     <img src="./img/projet/Kasa_img.PNG" alt="" class="card__image">
                     <div class="card__iner">
                         <h3 class="card__title">Kasa - Location immobilière</h3>

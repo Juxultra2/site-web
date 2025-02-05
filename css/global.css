@@ -282,7 +282,7 @@ section {
     z-index: 2;
     }
     .show-nav nav li a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     text-decoration: none;
     }
     .show-nav .burger .bar {
@@ -493,6 +493,10 @@ section {
     margin-bottom: 0;
 }
 
+.portfolio .grid__item.hide {
+    display: none;
+}
+
 .portfolio-filters .grid__item {
     max-width: 50%;
     margin-bottom: 0;
@@ -539,6 +543,7 @@ section {
     position: relative;
     box-shadow: 0 0 10px rgba(1, 16, 29, 0.40);
     border: 1px solid var(--background-services);
+    overflow: hidden;
 }
 
 .card img {
@@ -573,7 +578,8 @@ section {
     z-index: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    top: 110%;
+    transition: all .4s;
 }
 
 .card__overlay a {
@@ -584,6 +590,10 @@ section {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+.card:hover .card__overlay {
+    top: 0;
 }
 
 /*  Contacts */

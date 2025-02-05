@@ -1,5 +1,6 @@
-console.log ('test');
+//console.log ('test');
 
+// Menu mobile
 function menuMobile() {
     const burger = document.querySelector('.burger'); // Sélecteur pour le bouton burger
     const body = document.querySelector('body'); // Sélecteur pour l'élément qui gère la classe show-nav
@@ -18,8 +19,8 @@ function menuMobile() {
     });
 }
 
-// Appel de la fonction
 menuMobile();
+
 
 function smoothScroll() {
     const header = document.querySelector('header'); // Sélectionne ton header sticky
@@ -45,3 +46,50 @@ function smoothScroll() {
 }
 
 smoothScroll();
+
+// Porfolio filtre
+
+function tabsFilters() {
+    const tabs = document.querySelectorAll('.portfolio-filters a');
+    const projets = document.querySelectorAll('.portfolio .card');
+
+    const resetActiveLinks = () => {
+        tabs.forEach(elem => {
+        elem.classList.remove('active');
+        })
+    }
+
+    const showProjets = (elem) => {
+        //console.log(elem);
+        projets.forEach(projet => {
+
+        let filter = projet.getAttribute('data-category');
+
+        if (filter !== elem){
+            projet.parentNode.classList.add('hide');
+        } else {
+            projet.parentNode.classList.remove('hide');
+        }
+
+        if (elem === 'all') {
+            projet.parentNode.classList.remove('hide');
+            return
+            }
+        });
+    }
+    tabs.forEach(elem => {
+        elem.addEventListener('click', (event) => {
+            event.preventDefault();
+            let filter = elem.getAttribute('data-filter');
+            showProjets(filter)
+            resetActiveLinks();
+            elem.classList.add('active');
+        });
+    })
+}
+
+tabsFilters()
+
+
+
+// effets
