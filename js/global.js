@@ -55,7 +55,7 @@ function tabsFilters() {
 
     const resetActiveLinks = () => {
         tabs.forEach(elem => {
-        elem.classList.remove('active');
+            elem.classList.remove('active');
         })
     }
 
@@ -63,17 +63,17 @@ function tabsFilters() {
         //console.log(elem);
         projets.forEach(projet => {
 
-        let filter = projet.getAttribute('data-category');
+            let filter = projet.getAttribute('data-category');
 
-        if (filter !== elem){
-            projet.parentNode.classList.add('hide');
-        } else {
-            projet.parentNode.classList.remove('hide');
-        }
+            if (filter !== elem){
+                projet.parentNode.classList.add('hide');
+            } else {
+                projet.parentNode.classList.remove('hide');
+            }
 
-        if (elem === 'all') {
-            projet.parentNode.classList.remove('hide');
-            return
+            if (elem === 'all') {
+                projet.parentNode.classList.remove('hide');
+                return
             }
         });
     }
@@ -90,6 +90,32 @@ function tabsFilters() {
 
 tabsFilters()
 
+function showProjectDetails() {
+    const links = document.querySelectorAll('.card__link');
+    const modals = document.querySelectorAll('.modal');
+    const btns = document.querySelectorAll('.modal__close');
 
+    const hideModals = () => {
+        modals.forEach(modal => {
+            modal.classList.remove('show');
+        });
+    }
+
+    links.forEach(elem => {
+        elem.addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector(`[id=${elem.dataset.id}]`).classList.add('show');
+        });
+    });
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            hideModals();
+        });
+    });
+
+}
+
+showProjectDetails();
 
 // effets
