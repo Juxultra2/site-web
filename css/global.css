@@ -603,6 +603,28 @@ section {
     transition: all 1s ease;
 }
 
+.lienDesProjet {
+    display: flex;
+    gap: 2rem;
+    margin: 0 1rem;
+}
+
+.github-link {
+    color: var(--color-body);
+    border: 1.5px solid var(--color-body);
+    border-radius: 15%;
+    height: 4.2rem;
+    width: 4.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s;
+}
+
+.github-link:hover {
+    background: var(--color-body);
+    color: var(--texte-clair);
+}
 
 .card {
     background: var(--background-body);
@@ -687,9 +709,24 @@ section {
     margin-bottom: 2rem;
 }
 
-
 .form textarea {
     min-height: 200px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacement entre la case et le texte */
+    font-size: 1.2rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.checkbox-label input {
+    height: 2rem;
+}
+
+#consent {
+    width: 8%;
 }
 
 .form .btn {
