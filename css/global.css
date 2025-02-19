@@ -86,7 +86,7 @@ ul {
 }
 
 .container {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem 1rem 2rem;
 }
 
 .d-flex {
@@ -491,6 +491,14 @@ section {
 .portfolio .grid__item {
     max-width: 50%;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 749px) {
+
+    /* Mobile*/
+    .portfolio .grid__item {
+        max-width: 100%;
+    }
 }
 
 .portfolio .grid__item.hide {
