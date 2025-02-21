@@ -592,7 +592,7 @@ section {
 
 .modal__close {
     position: absolute;
-    right: 1rem;
+    right: 1.5rem;
     top: 1rem;
     background: none;
     border: 1px solid #eee;
