@@ -586,6 +586,13 @@ section {
     margin-bottom: 2rem;
 }
 
+.card__image {
+    max-height: 720px;
+    max-width: 560px;
+    object-fit: contain;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 .modal__title {
     margin: 0 0 2rem;
 }
